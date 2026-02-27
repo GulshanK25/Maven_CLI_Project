@@ -3,10 +3,7 @@ package service;
 import model.ConversionResult;
 import model.Currency;
 
-/**
- * Core business logic for converting currencies.
- * All validation and math lives here — fully testable without any GUI.
- */
+
 public class CurrencyConverterService {
 
     private final ExchangeRateRepository rateRepository;
