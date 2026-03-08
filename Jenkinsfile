@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main',
+                git branch: 'bidirectional_conversion',
                     url: 'https://github.com/GulshanK25/Maven_CLI_Project'
             }
         }
