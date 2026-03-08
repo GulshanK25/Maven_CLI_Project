@@ -24,7 +24,9 @@ public class CurrencyConverterService {
      * @return ConversionResult with all conversion details
      */
     public ConversionResult convert(double amount, Currency fromCurrency, Currency toCurrency) {
-        if (amount < 0)          throw new IllegalArgumentException("Amount cannot be negative.");
+        throw new UnsupportedOperationException("Not implemented yet");
+        // comment out for TDD - ensures tests fail
+        /* if (amount < 0)          throw new IllegalArgumentException("Amount cannot be negative.");
         if (fromCurrency == null) throw new IllegalArgumentException("Source currency cannot be null.");
         if (toCurrency == null)   throw new IllegalArgumentException("Target currency cannot be null.");
 
@@ -32,6 +34,7 @@ public class CurrencyConverterService {
         double convertedAmount = Math.round(amount * rate * 100.0) / 100.0;
 
         return new ConversionResult(amount, fromCurrency, toCurrency, convertedAmount, rate);
+        */
     }
 
     /**
