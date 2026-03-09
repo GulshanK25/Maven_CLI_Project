@@ -24,7 +24,7 @@ class ExchangeRateRepositoryTest {
         repository = new ExchangeRateRepository();
     }
 
-    // --- Same currency ---
+
 
     @Test
     @DisplayName("USD to USD rate should be exactly 1.0")
@@ -38,7 +38,7 @@ class ExchangeRateRepositoryTest {
         assertEquals(1.0, repository.getRate(Currency.EUR, Currency.EUR), 0.0001);
     }
 
-    // --- Rates are positive ---
+
 
     @ParameterizedTest
     @EnumSource(Currency.class)
@@ -56,7 +56,7 @@ class ExchangeRateRepositoryTest {
         assertTrue(rate > 0, "Rate from " + source + " to USD should be positive");
     }
 
-    // --- Rate consistency ---
+
 
     @Test
     @DisplayName("Rate from A to B multiplied by rate from B to A should equal 1")
@@ -74,7 +74,7 @@ class ExchangeRateRepositoryTest {
         assertEquals(1.0, usdToGbp * gbpToUsd, 0.0001);
     }
 
-    // --- Real world rate checks ---
+
 
     @Test
     @DisplayName("1 USD should buy more than 1 SEK (dollar stronger than krona)")
@@ -97,7 +97,6 @@ class ExchangeRateRepositoryTest {
         assertTrue(rate > 100.0, "1 USD should buy more than 100 JPY");
     }
 
-    // --- Null checks ---
 
     @Test
     @DisplayName("Null from-currency should throw IllegalArgumentException")
