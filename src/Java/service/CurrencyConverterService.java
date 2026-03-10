@@ -23,7 +23,11 @@ public class CurrencyConverterService {
      * @param toCurrency   target currency (not null)
      * @return ConversionResult with all conversion details
      */
+
+
     public ConversionResult convert(double amount, Currency fromCurrency, Currency toCurrency) {
+        throw new IllegalArgumentException("Awaiting implementation");
+        /*
         if (amount < 0)          throw new IllegalArgumentException("Amount cannot be negative.");
         if (fromCurrency == null) throw new IllegalArgumentException("Source currency cannot be null.");
         if (toCurrency == null)   throw new IllegalArgumentException("Target currency cannot be null.");
@@ -32,6 +36,8 @@ public class CurrencyConverterService {
         double convertedAmount = Math.round(amount * rate * 100.0) / 100.0;
 
         return new ConversionResult(amount, fromCurrency, toCurrency, convertedAmount, rate);
+
+ */
     }
 
     /**
@@ -39,10 +45,14 @@ public class CurrencyConverterService {
      * Example: "1 USD = 0.9200 EUR"
      */
     public String getFormattedRate(Currency from, Currency to) {
-        if (from == null || to == null) {
+        throw new IllegalArgumentException("Awaiting implementation");
+
+        /* if (from == null || to == null) {
             throw new IllegalArgumentException("Currencies cannot be null.");
         }
         double rate = rateRepository.getRate(from, to);
         return String.format("1 %s = %.4f %s", from.name(), rate, to.name());
+
+         */
     }
 }

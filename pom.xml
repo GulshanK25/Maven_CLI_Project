@@ -42,7 +42,16 @@
             <version>RELEASE</version>
             <scope>compile</scope>
         </dependency>
+        <!-- Mockito for mocking dependencies during unit test -->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>3.11.0</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
+
+
 
     <build>
         <sourceDirectory>src/Java</sourceDirectory>
@@ -68,7 +77,5 @@
             </plugin>
         </plugins>
     </build>
-
-
 
 </project>
