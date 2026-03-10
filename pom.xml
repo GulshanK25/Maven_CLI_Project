@@ -63,6 +63,9 @@
                 <version>3.11.0</version>
                 <configuration>
                     <release>17</release>
+                    <excludes>
+                        <exclude>Test/**</exclude>
+                    </excludes>
                 </configuration>
             </plugin>
 
