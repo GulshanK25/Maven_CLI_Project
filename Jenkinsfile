@@ -5,14 +5,14 @@ pipeline {
         maven 'Maven'
     }
     triggers {
-        pollSCM('H/3 * * * *')
+        pollSCM('* * * * *')
     }
 
     stages {
         stage('Checkout') {
             steps {
                 checkout scm
-            } 
+            }
         }
         stage('Build') {
             steps {
