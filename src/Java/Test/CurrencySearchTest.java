@@ -6,21 +6,21 @@ public class CurrencySearchTest {
 
     @Test
     public void testSearch_returnsMatchingCurrency() {
-        List<String> results = CurrencySearch.search("US");
+        List<String> results = CurrencySearchxxx.search("US");
         assertTrue(results.contains("USD"),
                 "Search for 'US' should return USD");
     }
 
     @Test
     public void testSearch_caseInsensitive() {
-        List<String> results = CurrencySearch.search("us");
+        List<String> results = CurrencySearchxxx.search("us");
         assertTrue(results.contains("USD"),
                 "Search should work regardless of case");
     }
 
     @Test
     public void testSearch_noMatch_returnsEmpty() {
-        List<String> results = CurrencySearch.search("ZZZ");
+        List<String> results = CurrencySearchxxx.search("ZZZ");
         assertTrue(results.isEmpty(),
                 "No match should return empty list");
     }
