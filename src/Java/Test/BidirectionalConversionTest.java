@@ -12,6 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @DisplayName("Bidirectional Conversion Tests")
 class BidirectionalConversionTest extends BaseTest
 {
+    // Currency conversion
     @Test
     @DisplayName("Converting USD to EUR")
     void convert_usd_to_eur() {
@@ -26,6 +27,7 @@ class BidirectionalConversionTest extends BaseTest
         assertEquals(100.0, result.getConvertedAmount(), 0.01);
     }
 
+    // Result formatting
     @Test
     @DisplayName("Result should be formatted to two decimal places")
     void convert_result_to_two_decimal_place() {

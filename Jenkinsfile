@@ -4,10 +4,16 @@ pipeline {
     tools {
         maven 'Maven'
     }
+    triggers {
+        pollSCM('* * * * *')
+    }
 
     stages {
         stage('Checkout') {
-            checkout scm
+            steps {
+                git branch: '*/integration_test_bidirectional_conversion',
+                    url: 'https://github.com/GulshanK25/Maven_CLI_Project'
+            }
         }
         stage('Build') {
             steps {
