@@ -4,12 +4,14 @@ pipeline {
     tools {
         maven 'Maven'
     }
+    trigger {
+        pollSCM('* * * * *')
+    }
 
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main',
-                    url: 'https://github.com/GulshanK25/Maven_CLI_Project'
+                checkout scm
             }
         }
         stage('Build') {
