@@ -52,7 +52,7 @@ public class CurrencyConverterService {
         }
         double rate = rateRepository.getRate(from, to);
         return String.format("1 %s = %.4f %s", from.name(), rate, to.name());
-        
+
          */
     }
 }
