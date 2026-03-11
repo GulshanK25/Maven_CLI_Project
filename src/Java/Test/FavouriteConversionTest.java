@@ -8,6 +8,9 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+// Favourite Conversion Feature
+// Unit tests for favourite conversion functionality
+
 @DisplayName("FavouriteConversion Tests")
 class FavouriteConversionTest {
 
@@ -35,7 +38,7 @@ class FavouriteConversionTest {
 
     @Test
     @DisplayName("Removing a pair should decrease list size")
-    void removFavourite_decreases_list_size() {
+    void removeFavourite_decreases_list_size() {
         favourites.addFavourite(Currency.USD, Currency.EUR);
         favourites.removeFavourite(Currency.USD, Currency.EUR);
         assertEquals(0, favourites.getFavourites().size());

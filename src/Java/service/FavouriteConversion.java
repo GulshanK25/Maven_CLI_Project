@@ -4,6 +4,7 @@ import model.Currency;
 import model.CurrencyPair;
 import java.util.List;
 
+// Favourite Conversion Service
 public class FavouriteConversion {
 
     public void addFavourite(Currency from, Currency to) {

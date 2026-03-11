@@ -4,7 +4,7 @@ pipeline {
     tools {
         maven 'Maven'
     }
-    trigger {
+    triggers {
         pollSCM('* * * * *')
     }
 
