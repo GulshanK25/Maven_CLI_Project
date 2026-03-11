@@ -45,6 +45,6 @@ public class CurrencyConverterService {
             throw new IllegalArgumentException("Currencies cannot be null.");
         }
         double rate = rateRepository.getRate(from, to);
-        return String.format("1 %s = %.4f %s", from.name(), rate, to.name());
+        return String.format(java.util.Locale.GERMANY, "1 %s = %.4f %s", from.name(), rate, to.name());
     }
 }
