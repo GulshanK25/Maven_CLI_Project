@@ -38,7 +38,6 @@ public class CurrencyConverterService {
         return new ConversionResult(amount, fromCurrency, toCurrency, convertedAmount, rate);
 
          */
-
     }
 
     /**
