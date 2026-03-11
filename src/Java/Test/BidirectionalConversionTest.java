@@ -7,9 +7,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 // Bidirectional Conversion
-// Tests that converts between two currencies works in both directions
+// Tests that ensures the possibility of converting between two currencies in both direction
 
-@DisplayName("TC1 - Bidirectional Conversion Tests")
+@DisplayName("Bidirectional Conversion Tests")
 class BidirectionalConversionTest extends BaseTest
 {
     @Test
@@ -40,6 +40,7 @@ class BidirectionalConversionTest extends BaseTest
         assertEquals(100.0, result.getConvertedAmount(), 0.01);
     }
 
+    // Edge cases
     @Test
     @DisplayName("Converting zero amount should return zero")
     void convert_zero_amount_returns_zero() {
