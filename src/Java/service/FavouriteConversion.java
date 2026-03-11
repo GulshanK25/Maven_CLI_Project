@@ -2,28 +2,39 @@ package service;
 
 import model.Currency;
 import model.CurrencyPair;
+
+import java.util.ArrayList;
 import java.util.List;
 
 // Favourite Conversion Service
 public class FavouriteConversion {
 
+    private final List<CurrencyPair> favourites = new ArrayList<>();
+
+    private CurrencyPair pair(Currency from, Currency to) {
+        return new CurrencyPair(from, to);
+    }
+
     public void addFavourite(Currency from, Currency to) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        CurrencyPair favouriteCurrencyPair = pair(from, to);
+        if (!favourites.contains(favouriteCurrencyPair)) {
+            favourites.add(favouriteCurrencyPair);
+        }
     }
 
     public void removeFavourite(Currency from, Currency to) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        favourites.remove(pair(from, to));
     }
 
     public boolean isFavourite(Currency from, Currency to) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        return favourites.contains(pair(from, to));
     }
 
     public List<CurrencyPair> getFavourites() {
-        throw new UnsupportedOperationException("Not yet implemented");
+        return favourites;
     }
 
     public void clearFavourites() {
-        throw new UnsupportedOperationException("Not yet implemented");
+        favourites.clear();
     }
 }
