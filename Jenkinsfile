@@ -10,9 +10,8 @@ pipeline {
 
     stages {
         stage('Checkout') {
-            steps {
-                checkout scm
-            }
+            git branch: 'currencyConverterService_file_unit_test',
+                url: 'https://github.com/GulshanK25/Maven_CLI_Project'
         }
         stage('Build') {
             steps {

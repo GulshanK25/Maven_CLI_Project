@@ -26,7 +26,7 @@ public class CurrencyConverterService {
 
 
     public ConversionResult convert(double amount, Currency fromCurrency, Currency toCurrency) {
-        throw new UnsupportedOperationException("Not Yet Implemented");
+        throw new UnsupportedOperationException("Not yet implemented");
         /*
         if (amount < 0)          throw new IllegalArgumentException("Amount cannot be negative.");
         if (fromCurrency == null) throw new IllegalArgumentException("Source currency cannot be null.");
@@ -38,6 +38,7 @@ public class CurrencyConverterService {
         return new ConversionResult(amount, fromCurrency, toCurrency, convertedAmount, rate);
 
          */
+
     }
 
     /**
@@ -45,7 +46,7 @@ public class CurrencyConverterService {
      * Example: "1 USD = 0.9200 EUR"
      */
     public String getFormattedRate(Currency from, Currency to) {
-        throw new UnsupportedOperationException("Not Yet Implemented");
+        throw new UnsupportedOperationException("Not yet implemented");
         /*
         if (from == null || to == null) {
             throw new IllegalArgumentException("Currencies cannot be null.");
