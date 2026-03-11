@@ -4,11 +4,14 @@ pipeline {
     tools {
         maven 'Maven'
     }
+    triggers {
+        pollSCM('* * * * *')
+    }
 
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main',
+                git branch: 'currencyConverterService_file_unit_test',
                     url: 'https://github.com/GulshanK25/Maven_CLI_Project'
             }
         }
