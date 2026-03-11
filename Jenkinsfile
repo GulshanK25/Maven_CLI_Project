@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'integration_test_bidirectional_conversion',
+                git branch: 'currencyConverterService_file_unit_test',
                     url: 'https://github.com/GulshanK25/Maven_CLI_Project'
             }
         }

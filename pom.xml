@@ -42,7 +42,22 @@
             <version>RELEASE</version>
             <scope>compile</scope>
         </dependency>
+        <!-- Mockito for mocking dependencies during unit test -->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>3.11.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>5.20.0</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
+
+
 
     <build>
         <sourceDirectory>src/Java</sourceDirectory>
@@ -54,6 +69,9 @@
                 <version>3.11.0</version>
                 <configuration>
                     <release>17</release>
+                    <excludes>
+                        <exclude>Test/**</exclude>
+                    </excludes>
                 </configuration>
             </plugin>
 
@@ -68,7 +86,5 @@
             </plugin>
         </plugins>
     </build>
-
-
 
 </project>

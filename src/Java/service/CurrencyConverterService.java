@@ -23,6 +23,8 @@ public class CurrencyConverterService {
      * @param toCurrency   target currency (not null)
      * @return ConversionResult with all conversion details
      */
+
+
     public ConversionResult convert(double amount, Currency fromCurrency, Currency toCurrency) {
         if (amount < 0)          throw new IllegalArgumentException("Amount cannot be negative.");
         if (fromCurrency == null) throw new IllegalArgumentException("Source currency cannot be null.");
