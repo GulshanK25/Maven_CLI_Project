@@ -2,16 +2,29 @@ package Test;
 
 import model.Currency;
 import model.ConversionResult;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import service.CurrencyConverterService;
+import service.ExchangeRateRepository;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 // Bidirectional Conversion
 // Tests that ensures the possibility of converting between two currencies in both direction
 
 @DisplayName("Bidirectional Conversion Tests")
-class BidirectionalConversionTest extends BaseTest
+class BidirectionalConversionTest
 {
+    private ExchangeRateRepository repository;
+    private CurrencyConverterService service;
+
+    @BeforeEach
+    void setUp() {
+        repository = new ExchangeRateRepository();
+        service = new CurrencyConverterService(repository);
+    }
+
     // Currency Conversion
     @Test
     @DisplayName("Converting USD to EUR")
