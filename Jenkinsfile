@@ -12,6 +12,9 @@ pipeline {
         pollSCM('* * * * *')
         
     }
+    triggers {
+        pollSCM('* * * * *')
+    }
 
     stages {
         stage('Checkout') {
