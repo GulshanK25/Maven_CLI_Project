@@ -33,7 +33,7 @@ class Task3IntegrationTest {
         history   = new ConversionHistory();
     }
 
-    // --- Validator + Service ---
+
 
     @Test
     @DisplayName("Valid input should pass validation and convert successfully")
@@ -106,24 +106,24 @@ class Task3IntegrationTest {
         assertEquals(Currency.JPY, history.getLatest().getToCurrency());
     }
 
-    // --- Full workflow ---
+
 
     @Test
     @DisplayName("Full workflow: validate, convert, store in history")
     void fullWorkflow_validateConvertStore() {
         String userInput = "250";
 
-        // Step 1: validate
+
         assertTrue(validator.isValidAmountString(userInput));
 
-        // Step 2: convert
+
         double amount = Double.parseDouble(userInput);
         ConversionResult result = service.convert(amount, Currency.USD, Currency.SEK);
 
-        // Step 3: store
+
         history.add(result);
 
-        // Step 4: verify everything is correct
+
         assertAll(
             () -> assertEquals(1, history.size()),
             () -> assertEquals(250.0, history.getLatest().getInputAmount(), 0.001),
@@ -142,7 +142,7 @@ class Task3IntegrationTest {
 
         assertTrue(history.isEmpty());
 
-        // Can still add new conversions after clearing
+
         history.add(service.convert(300, Currency.USD, Currency.JPY));
         assertEquals(1, history.size());
     }
