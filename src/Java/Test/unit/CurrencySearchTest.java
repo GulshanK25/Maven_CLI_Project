@@ -1,4 +1,4 @@
-package Test;
+package Test.unit;
 import org.junit.jupiter.api.Test;
 import service.CurrencySearch;
 

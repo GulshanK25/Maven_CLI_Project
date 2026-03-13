@@ -1,4 +1,4 @@
-package Test;
+package Test.unit;
 
 import model.Currency;
 import model.ConversionResult;
@@ -19,12 +19,12 @@ class CurrencyConverterServiceTest {
 
     @BeforeEach
     void setUp() {
-        mockRepo = mock(ExchangeRateRepository.class);
+        mockRepo = mock(ExchangeRateRepository.class);  // allows to test CurrencyConverterService in isolation
         service = new CurrencyConverterService(mockRepo);
     }
 
     @Test
-    @DisplayName("Rate repositroy being null should throw IllegalArgumentException")
+    @DisplayName("Rate repository being null should throw IllegalArgumentException")
     void rate_repository_constructor() {
         assertThrows(IllegalArgumentException.class,
                 () -> new CurrencyConverterService(null));

@@ -1,4 +1,4 @@
-package Test;
+package Test.unit;
 
 import model.Currency;
 import model.CurrencyPair;
@@ -8,8 +8,11 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-// Favourite Conversion Feature
-// Unit tests for favourite conversion functionality
+/**
+ * Unit tests 5.
+ * Tests that FavouriteConversion service works as intended
+ */
+
 
 @DisplayName("FavouriteConversion Tests")
 class FavouriteConversionTest {

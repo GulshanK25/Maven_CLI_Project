@@ -1,4 +1,4 @@
-package Test;
+package Test.integration;
 
 import model.Currency;
 import model.ConversionResult;
@@ -10,8 +10,12 @@ import service.ExchangeRateRepository;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-// Bidirectional Conversion
-// Tests that ensures the possibility of converting between two currencies in both direction
+/**
+ * Integration test 1.
+ *
+ * Tests that ExchangeRateRepository and CurrencyConverterService work together correctly
+ * in converting between two currencies in both direction
+ */
 
 @DisplayName("Bidirectional Conversion Tests")
 class BidirectionalConversionTest

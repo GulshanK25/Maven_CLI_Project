@@ -1,4 +1,4 @@
-package Test;
+package Test.integration;
 
 import model.ConversionResult;
 import model.Currency;
@@ -13,14 +13,14 @@ import service.ExchangeRateRepository;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Integration tests for Task 3.
+ * Integration tests 2.
  *
  * Tests that CurrencyValidator, CurrencyConverterService,
  * and ConversionHistory all work together correctly
  * in realistic end-to-end scenarios.
  */
-@DisplayName("Task 3 - Full System Integration Tests")
-class Task3IntegrationTest {
+@DisplayName("IT2 - Conversion System Integration Tests")
+class ConversionWorkflowIntegrationTest {
 
     private CurrencyConverterService service;
     private CurrencyValidator validator;
@@ -32,8 +32,6 @@ class Task3IntegrationTest {
         validator = new CurrencyValidator();
         history   = new ConversionHistory();
     }
-
-
 
     @Test
     @DisplayName("Valid input should pass validation and convert successfully")

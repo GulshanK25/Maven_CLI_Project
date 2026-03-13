@@ -1,4 +1,4 @@
-package Test;
+package Test.unit;
 
 import model.ConversionResult;
 import model.Currency;
