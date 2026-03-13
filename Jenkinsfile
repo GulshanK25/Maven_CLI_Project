@@ -8,13 +8,6 @@ pipeline {
     triggers {
         pollSCM('* * * * *')
     }
-    triggers {
-        pollSCM('* * * * *')
-        
-    }
-    triggers {
-        pollSCM('* * * * *')
-    }
 
     stages {
         stage('Checkout') {

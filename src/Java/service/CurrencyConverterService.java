@@ -37,7 +37,7 @@ public class CurrencyConverterService {
     }
 
     /**
-     * Returns a human-readable rate string.
+     * Returns a human-readable rate string
      * Example: "1 USD = 0.9200 EUR"
      */
     public String getFormattedRate(Currency from, Currency to) {
